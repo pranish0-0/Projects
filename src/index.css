@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    font-family: 'Roberto', 'sans-serif';
+    /* font-size: 18px; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.keypad{
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+body{
+    background-color: #000300;
+}
+.backbtn{
+    justify-content: left;
+}
+
+.user-hand {
+    transform: rotateY(180deg);
+    background: transparent;
+}
+
+@font-face{
+    font-family: 'ClockIcons';
+    src: url('./Components/clockicons.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'DaggerSquare';
+    src: url('./Components/daggersquare.ttf') format('truetype');
 }
